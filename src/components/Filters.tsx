@@ -43,7 +43,7 @@ const Filters = ({ onFilter }: Props) => {
           setFilters({ ...selectedFilters, genre: e.currentTarget.value })
         }
       >
-        <option value="sci-fi" label="Sci-fi" />
+        <option value="sci-fi" label="Sci-fi">Sci-fi</option>
         <option value="comedy" label="Comedy" />
         <option value="horror" label="Horror" />
         <option value="romance" label="Romance" />
