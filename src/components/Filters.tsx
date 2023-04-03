@@ -30,10 +30,10 @@ const Filters = ({ onFilter }: Props) => {
           setFilters({ ...selectedFilters, quality: e.currentTarget.value });
         }}
       >
-        <option value="2160p" label="4K" />
-        <option value="1080p" label="HD" />
-        <option value="720p" label="720p" />
-        <option value="3D" label="3D" />
+        <option value="2160p" label="4K">4K</option>
+        <option value="1080p" label="HD">HD</option>
+        <option value="720p" label="720p">720p</option>
+        <option value="3D" label="3D">3D</option>
       </Select>
 
       <Select
@@ -44,22 +44,22 @@ const Filters = ({ onFilter }: Props) => {
         }
       >
         <option value="sci-fi" label="Sci-fi">Sci-fi</option>
-        <option value="comedy" label="Comedy" />
-        <option value="horror" label="Horror" />
-        <option value="romance" label="Romance" />
-        <option value="action" label="Action" />
-        <option value="thriller" label="Thriller" />
-        <option value="drama" label="Drama" />
-        <option value="mystery" label="Mystery" />
-        <option value="crime" label="Crime" />
-        <option value="animation" label="Animation" />
-        <option value="adventure" label="Adventure" />
-        <option value="fantasy" label="Fantasy" />
-        <option value="musical" label="Musical" />
-        <option value="documentary" label="Documentary" />
-        <option value="history" label="History" />
-        <option value="biography" label="Biography" />
-        <option value="family" label="Family" />
+        <option value="comedy" label="Comedy">Comedy</option>
+        <option value="horror" label="Horror">Horror</option>
+        <option value="romance" label="Romance">Romance</option>
+        <option value="action" label="Action">Action</option>
+        <option value="thriller" label="Thriller">Thriller</option>
+        <option value="drama" label="Drama">Drama</option>
+        <option value="mystery" label="Mystery">Mystery</option>
+        <option value="crime" label="Crime">Crime</option>
+        <option value="animation" label="Animation">Animation</option>
+        <option value="adventure" label="Adventure">Adventure</option>
+        <option value="fantasy" label="Fantasy">Fantasy</option>
+        <option value="musical" label="Musical">Musical</option>
+        <option value="documentary" label="Documentary">Documentary</option>
+        <option value="history" label="History">History</option>
+        <option value="biography" label="Biography">Biography</option>
+        <option value="family" label="Family">Family</option>
       </Select>
 
       <Select
@@ -70,24 +70,24 @@ const Filters = ({ onFilter }: Props) => {
         }
       >
         {ratings.map((rating) => (
-          <option key={rating} value={rating} label={rating.toString()} />
+          <option key={rating} value={rating} label={rating.toString()}>{rating}</option>
         ))}
       </Select>
 
       <Select
-        placeholder="Sort By"
+        placeholder="Sort"
         variant="filled"
         onChange={(e) =>
           setFilters({ ...selectedFilters, sortBy: e.currentTarget.value })
         }
       >
-        <option value="date_added" label="Date added" />
-        <option value="like_count" label="Like count" />
-        <option value="download_count" label="Download count" />
-        <option value="rating" label="Rating" />
-        <option value="year" label="Year" />
-        <option value="seeds" label="Seeds" />
-        <option value="peers" label="Peers" />
+        <option value="date_added" label="Date added">Date added</option>
+        <option value="like_count" label="Like count">Like count</option>
+        <option value="download_count" label="Download count">Download count</option>
+        <option value="rating" label="Rating">Rating</option>
+        <option value="year" label="Year">Year</option>
+        <option value="seeds" label="Seeds">Seeds</option>
+        <option value="peers" label="Peers">Peers</option>
       </Select>
     </HStack>
   );
