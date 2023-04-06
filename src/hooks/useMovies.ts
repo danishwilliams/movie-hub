@@ -59,7 +59,11 @@ const useMovies = (query: MovieQuery) => {
     };
   }, [query]);
 
-  return { data, error, isLoading };
+  const clearData = () => {
+    setData(undefined);
+  }
+
+  return { data, error, isLoading, clearData};
 };
 
 export default useMovies;

@@ -1,35 +1,29 @@
-import {
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
-} from "@chakra-ui/react";
-import Search from "./Search";
-import Filter from "./Filter";
+import { HStack, Heading, useColorMode, Image } from "@chakra-ui/react";
+import ThemeToggle from "./ThemeToggle";
+import logo from "../assets/logo.jpeg";
 
 const Nav = () => {
+  const { colorMode } = useColorMode();
+
   return (
-    <Tabs
-      paddingTop={3}
-      width="100%"
-      align="center"
-      variant="soft-rounded"
-      colorScheme="blue"
+    <HStack
+      justifyContent="space-between"
+      padding={4}
+      bgColor={colorMode === "dark" ? "gray.700" : "blue.100"}
+      borderRadius="10px"
+      marginY={3}
+      marginX={3}
     >
-      <TabList>
-        <Tab>Search</Tab>
-        <Tab>Filter</Tab>
-      </TabList>
-      <TabPanels>
-        <TabPanel>
-          <Search />
-        </TabPanel>
-        <TabPanel>
-          <Filter />
-        </TabPanel>
-      </TabPanels>
-    </Tabs>
+      <Image
+        borderRadius="full"
+        boxSize="40px"
+        src={logo}
+      />
+      <Heading as="h3" size="lg">
+        Movie Hub
+      </Heading>
+      <ThemeToggle />
+    </HStack>
   );
 };
 

@@ -1,12 +1,14 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import { useState } from "react";
 import "./App.css";
 import Nav from "./components/Nav";
+import NavTabs from "./components/NavTabs";
+import theme from "./utils/theme";
 
 function App() {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Nav />
+      <NavTabs />
     </ChakraProvider>
   );
 }

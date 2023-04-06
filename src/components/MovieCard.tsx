@@ -2,7 +2,6 @@ import { DownloadIcon } from "@chakra-ui/icons";
 import {
   Card,
   CardBody,
-  Stack,
   Heading,
   Badge,
   VStack,
@@ -18,11 +17,10 @@ interface Props {
 
 const MovieCard = ({ movie }: Props) => {
   return (
-    <Card width="100%" key={movie.id} maxW="sm" bgColor="gray.100">
+    <Card width="100%" key={movie.id} maxW="sm">
       <CardBody>
-        <Image src={movie.medium_cover_image} borderRadius="lg" />
-
-        <Stack mt="6" spacing="3">
+        <VStack mt="3" spacing="3">
+          <Image src={movie.medium_cover_image} borderRadius="lg" />
           <Heading size="md">
             <Link
               href={`https://www.imdb.com/find/?q=${encodeURIComponent(
@@ -35,7 +33,7 @@ const MovieCard = ({ movie }: Props) => {
               {movie.rating}
             </Badge>
           </Heading>
-        </Stack>
+        </VStack>
 
         <VStack paddingTop={4}>
           {movie.torrents.map((torrent) => (

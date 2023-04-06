@@ -16,8 +16,8 @@ const SearchInput = ({ onSearch }: Props) => {
         if (inputRef.current?.value) onSearch(inputRef.current.value);
       }}
     >
-      <HStack align="center" justifyContent="center">
-        <InputGroup width="200px">
+      <HStack>
+        <InputGroup width='100%'>
           <InputLeftElement
             pointerEvents="none"
             children={<SearchIcon color="gray.300" />}
