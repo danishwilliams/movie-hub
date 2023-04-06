@@ -42,7 +42,7 @@ const useMovies = (query: MovieQuery) => {
     axios
       .get<FetchResponse>("https://yts.mx/api/v2/list_movies.json", {
         signal: controller.signal,
-        params: { query_term: query.searchText, quality: query.quality, genre: query.genre, minimum_rating: query.rating, sort_by: query.sortBy },
+        params: { query_term: query.searchText, quality: query.quality, genre: query.genre, minimum_rating: query.rating, sort_by: query.sortBy, limit: 50 },
       })
       .then((res) => setData(res.data.data.movies ?? []))
       .catch((error) => {
